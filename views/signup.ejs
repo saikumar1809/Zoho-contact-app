@@ -1,0 +1,26 @@
+<%- include('./partials/header.ejs') %>
+<body>
+<%- include('./partials/nav.ejs') %>
+      <div class="container-sm">
+        <form class="signup-form">
+          <h3 class="headings">
+            <small class="text-muted">Signup</small>
+          </h3>
+        <div class="mb-3">
+          <label for="Email1" class="form-label">Email address</label>
+          <input type="email" class="form-control" id="Email1" aria-describedby="emailHelp">
+         
+        </div>
+        <div class="mb-3">
+          <label for="Password1" class="form-label">Password</label>
+          <input type="password" class="form-control" id="Password1">
+        </div>
+        <div class="mb-3">
+          <label for="secret" class="form-label">secret</label>
+          <input type="text" class="form-control" id="secret" >
+         
+        </div>
+        <button type="submit" class="btn btn-primary">Signup</button>
+        <p class="h6">already a user?<a href="/" class="btn btn-secondary "> Login</a></p>
+      </form></div>
+      <%- include('./partials/footer.ejs') %>

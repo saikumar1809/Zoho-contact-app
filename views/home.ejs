@@ -1,0 +1,52 @@
+<%- include('./partials/header.ejs') %>
+<%- include('./partials/nav.ejs') %>
+
+<body>
+    <form class="add-contact">
+    <h3 class="Add contacts row gy-2 gx-3 align-items-center">
+        <small class="text-muted">Signup</small>
+      </h3>
+    <div class="form-floating mb-3">
+        <input type="text-box" class="form-control" id="contact-name" placeholder="abc">
+        <label for="contact-name">Name</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="email" class="form-control" id="contact-email" placeholder="name@example.com">
+        <label for="contact-email">Email address</label>
+      </div>
+      <div class="form-floating mb-3">
+        <input type="Number" class="form-control" id="contact-phone" placeholder="1234345434">
+        <label for="contact-phone">Phone number</label>
+      </div>
+      <button type="submit" class="btn btn-primary">Add</button>
+      </div>
+
+    </form>
+
+
+
+    <table class="table">
+        <h3 class="Add contacts row gy-2 gx-3 align-items-center">
+            <small class="text-muted">MY CONTACTS</small>
+          </h3>
+        <thead>
+          <tr>
+            
+            <th scope="col">Name</th>
+            <th scope="col">phone No</th>
+            <th scope="col">Email</th>
+          </tr>
+        </thead>
+        <tbody>
+            <% for(let contact of contacts){ %>
+          <tr>
+           
+            <td><%= contact.name %></td>
+            <td><%= contact.email %></td>
+            <td><%= contact.phone %></td>
+          </tr>
+          <%}%>
+        </tbody>
+      </table>
+
+<%- include('./partials/footer.ejs') %>
